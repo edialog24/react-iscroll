@@ -31,7 +31,7 @@ var excludePropNames = ['defer', 'iScroll', 'onRefresh', 'options'];
 // Events available on iScroll instance
 // {`react component event name`: `iScroll event name`}
 var availableEventNames = {};
-var iScrollEventNames = ['beforeScrollStart', 'scrollCancel', 'scrollStart', 'scroll', 'scrollEnd', 'flick', 'zoomStart', 'zoomEnd'];
+var iScrollEventNames = ['beforeScrollStart', 'scrollCancel', 'scrollStart', 'initialize', 'scroll', 'scrollEnd', 'flick', 'zoomStart', 'zoomEnd'];
 
 for (var i = 0, len = iScrollEventNames.length; i < len; i++) {
   var iScrollEventName = iScrollEventNames[i];
