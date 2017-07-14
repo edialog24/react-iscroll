@@ -7,7 +7,7 @@ const excludePropNames = ['defer', 'iScroll', 'onRefresh', 'options']
 // Events available on iScroll instance
 // {`react component event name`: `iScroll event name`}
 const availableEventNames = {}
-const iScrollEventNames = ['beforeScrollStart', 'scrollCancel', 'scrollStart', 'scroll', 'scrollEnd', 'flick', 'zoomStart', 'zoomEnd']
+const iScrollEventNames = ['beforeScrollStart', 'scrollCancel', 'scrollStart','initialize', 'scroll', 'scrollEnd', 'flick', 'zoomStart', 'zoomEnd']
 
 for (let i = 0, len = iScrollEventNames.length; i < len; i++) {
   const iScrollEventName = iScrollEventNames[i]
@@ -17,7 +17,7 @@ for (let i = 0, len = iScrollEventNames.length; i < len; i++) {
 }
 
 export default class ReactIScroll extends React.Component {
-  static displayName = 'ReactIScroll'
+  static displayName = 'ReactIScroll';
 
   static defaultProps = {
     defer: true,
@@ -28,7 +28,7 @@ export default class ReactIScroll extends React.Component {
       width: '100%',
       overflow: 'hidden'
     }
-  }
+  };
 
   constructor(props) {
     super(props)
@@ -239,7 +239,7 @@ export default class ReactIScroll extends React.Component {
 
   render() {
     // Keep only non ReactIScroll properties
-    const props = {}
+    const props = {};
 
     for (const prop in this.props) {
       if (!~excludePropNames.indexOf(prop)) {
